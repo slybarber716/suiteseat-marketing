@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuiteSeat - Suite Booking Software for Suite Owners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #0A0A0A;
+            color: #E8E8E8;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0A0A0A;
+            border-bottom: 1px solid #C9A96E;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #C9A96E;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #E8E8E8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #C9A96E;
+        }
+
+        .btn-primary {
+            background: #C9A96E;
+            color: #0A0A0A;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(201, 169, 110, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #E8D4B8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #C9A96E;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(201, 169, 110, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+            color: #C9A96E;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 900;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #E8E8E8;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #C9A96E;
+            padding: 0.75rem 2rem;
+            border: 2px solid #C9A96E;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #C9A96E;
+            color: #0A0A0A;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: #0A0A0A;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #C9A96E;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            padding: 2.5rem;
+            border-left: 5px solid #C9A96E;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-radius: 2px;
+        }
+
+        .feature-card:hover {
+            background: linear-gradient(135deg, #252525 0%, #2d2d2d 100%);
+            transform: translateX(8px) translateY(-4px);
+            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.15);
+            border-left-color: #E8D4B8;
+        }
+
+        .feature-card h3 {
+            color: #C9A96E;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #B8B8B8;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Who It's For */
+        .who-for {
+            padding: 5rem 2rem;
+            background: #1a1a1a;
+            border-top: 1px solid #C9A96E;
+        }
+
+        .who-for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .who-card {
+            background: #0A0A0A;
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid #C9A96E;
+        }
+
+        .who-card h3 {
+            color: #C9A96E;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            background: #0A0A0A;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            padding: 3rem;
+            border: 2px solid #333;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            border-radius: 2px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 50px rgba(201, 169, 110, 0.25);
+            border-color: #C9A96E;
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #C9A96E;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            box-shadow: 0 8px 30px rgba(201, 169, 110, 0.3);
+        }
+        
+        .pricing-card.featured:hover {
+            box-shadow: 0 20px 60px rgba(201, 169, 110, 0.4);
+        }
+
+        .pricing-card .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #C9A96E;
+            color: #0A0A0A;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .pricing-card h3 {
+            color: #C9A96E;
+            font-size: 1.8rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            color: #C9A96E;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+
+        .price-period {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .first-month-free {
+            color: #C9A96E;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .features-list {
+            text-align: left;
+            margin: 2rem 0;
+            color: #B8B8B8;
+        }
+
+        .features-list li {
+            list-style: none;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: #C9A96E;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #C9A96E 0%, #B8A360 100%);
+            text-align: center;
+            color: #0A0A0A;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background: #0A0A0A;
+            color: #C9A96E;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-cta:hover {
+            background: #1a1a1a;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #0A0A0A;
+            border-top: 1px solid #C9A96E;
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SuiteSeat</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#" class="btn-primary">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>SuiteSeat</h1>
+            <p class="tagline">Suite Booking Software Built for Suite Owners</p>
+            <p style="color: #888; font-size: 1.1rem; margin-bottom: 2rem;">
+                Manage your clients. Own your suite.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn-primary">Start Free Trial</button>
+                <button class="btn-secondary">See Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Built for You</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📱 Easy Booking</h3>
+                    <p>Clients book online 24/7. No back-and-forth texts or calls. Simple, beautiful booking page.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📲 SMS Automations</h3>
+                    <p>Automatic reminders, check-in alerts, and confirmations. Keep clients informed without the work.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💳 Smart Payments</h3>
+                    <p>Deposits, full payments, no-show fees. All through Square. You control what clients pay.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Client Management</h3>
+                    <p>See who booked, how much they paid, their history. Everything in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚫 No-Show Protection</h3>
+                    <p>Automatic no-show fees charged to card on file. Reduce missed appointments.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⏰ Custom Schedule</h3>
+                    <p>Set your hours, services, and pricing. Update availability anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="who-for">
+        <div class="container">
+            <h2 class="section-title">Who It's For</h2>
+            <div class="who-for-grid">
+                <div class="who-card">
+                    <h3>Suite Owners</h3>
+                    <p>Rent your suite, build your clientele. Manage bookings independently.</p>
+                </div>
+                <div class="who-card">
+                    <h3>Independent Barbers</h3>
+                    <p>Own your chair, your clients, your schedule. Full control.</p>
+                </div>
+                <div class="who-card">
+                    <h3>Salon/Tat Artists</h3>
+                    <p>Rent space, manage your own business. Keep what you earn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 3rem; font-size: 1.1rem;">
+                First month free on any plan. Cancel anytime.
+            </p>
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$19<span class="price-period">/mo</span></div>
+                    <div class="first-month-free">+ 1 month free</div>
+                    <ul class="features-list">
+                        <li>Up to 5 services</li>
+                        <li>Basic booking page</li>
+                        <li>Email confirmations</li>
+                        <li>Client history</li>
+                        <li>Mobile friendly</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+
+                <!-- Pro (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="badge">MOST POPULAR</div>
+                    <h3>Pro</h3>
+                    <div class="price">$29<span class="price-period">/mo</span></div>
+                    <div class="first-month-free">+ 1 month free</div>
+                    <ul class="features-list">
+                        <li>Unlimited services</li>
+                        <li>SMS reminders</li>
+                        <li>QR code check-in</li>
+                        <li>No-show fees</li>
+                        <li>Payment deposits</li>
+                        <li>Advanced analytics</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+
+                <!-- Premium -->
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">$79<span class="price-period">/mo</span></div>
+                    <div class="first-month-free">+ 1 month free</div>
+                    <ul class="features-list">
+                        <li>Everything in Pro</li>
+                        <li>Custom branding</li>
+                        <li>White-label option</li>
+                        <li>Priority support</li>
+                        <li>API access</li>
+                        <li>Team management</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Stop Managing Bookings?</h2>
+            <p>First month is free. Try it risk-free.</p>
+            <button class="btn-cta">Start Your Free Trial</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SuiteSeat. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Built by suite owners. For suite owners.</p>
+        </div>
+    </footer>
+</body>
+</html>
