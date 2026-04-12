@@ -386,6 +386,92 @@
             color: #888;
         }
 
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: #0A0A0A;
+            margin: 5% auto;
+            padding: 3rem;
+            border: 2px solid #C9A96E;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 2px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #C9A96E;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #E8D4B8;
+        }
+
+        .comparison-table {
+            overflow-x: auto;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            color: #C9A96E;
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid #C9A96E;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #333;
+            color: #E8E8E8;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #252525;
+        }
+
+        .comparison-table tbody tr td:first-child {
+            color: #C9A96E;
+            font-weight: 600;
+        }
+
+        .comparison-table tbody tr td {
+            text-align: center;
+        }
+
+        .comparison-table tbody tr td:first-child {
+            text-align: left;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -406,6 +492,21 @@
 
             .price {
                 font-size: 2rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+                padding: 1.5rem;
+            }
+
+            .comparison-table table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.8rem;
             }
         }
     </style>
@@ -560,6 +661,127 @@
         </div>
     </section>
 
+    <!-- Comparison Modal -->
+    <div id="comparisonModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color: #C9A96E; text-align: center; margin-bottom: 2rem;">Feature Comparison</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Starter<br><span style="font-size: 0.9rem; font-weight: normal;">$19/mo</span></th>
+                            <th>Pro<br><span style="font-size: 0.9rem; font-weight: normal;">$29/mo</span></th>
+                            <th>Premium<br><span style="font-size: 0.9rem; font-weight: normal;">$79/mo</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Services</td>
+                            <td>Up to 5</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Booking Page</td>
+                            <td>Basic</td>
+                            <td>Advanced</td>
+                            <td>Custom</td>
+                        </tr>
+                        <tr>
+                            <td>Email Confirmations</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>SMS Reminders</td>
+                            <td></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>QR Code Check-In</td>
+                            <td></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>No-Show Fees</td>
+                            <td></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Deposits</td>
+                            <td></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Analytics</td>
+                            <td></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Client History</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Friendly</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Custom Branding</td>
+                            <td></td>
+                            <td></td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>White-Label</td>
+                            <td></td>
+                            <td></td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Priority Support</td>
+                            <td></td>
+                            <td></td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>API Access</td>
+                            <td></td>
+                            <td></td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Team Management</td>
+                            <td></td>
+                            <td></td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>First Month Free</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align: center; color: #888; margin-top: 2rem; font-size: 0.95rem;">
+                All plans include email support. Premium includes priority support.
+            </p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -567,5 +789,32 @@
             <p style="margin-top: 1rem; font-size: 0.9rem;">Built by suite owners. For suite owners.</p>
         </div>
     </footer>
+
+    <script>
+        // Pricing comparison modal
+        const modal = document.getElementById('comparisonModal');
+        const closeBtn = document.querySelector('.close');
+        const pricingCards = document.querySelectorAll('.pricing-card');
+
+        // Open modal when clicking pricing cards
+        pricingCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('btn-primary')) {
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        // Close modal
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
