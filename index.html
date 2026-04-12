@@ -386,6 +386,112 @@
             color: #888;
         }
 
+        /* Competitor Comparison */
+        .competitor-comparison {
+            padding: 5rem 2rem;
+            background: #0A0A0A;
+            border-top: 1px solid #C9A96E;
+            border-bottom: 1px solid #C9A96E;
+        }
+
+        .competitor-table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 3rem;
+        }
+
+        .competitor-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .competitor-table th {
+            background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+            color: #C9A96E;
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #C9A96E;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .competitor-table th:first-child {
+            text-align: left;
+        }
+
+        .competitor-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #333;
+            color: #E8E8E8;
+            text-align: center;
+        }
+
+        .competitor-table td:first-child {
+            text-align: left;
+            color: #C9A96E;
+            font-weight: 600;
+            background: rgba(201, 169, 110, 0.05);
+        }
+
+        .competitor-table tbody tr:hover {
+            background: rgba(201, 169, 110, 0.08);
+        }
+
+        .competitor-table .check {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .competitor-table .x {
+            color: #FF6B6B;
+            font-weight: bold;
+        }
+
+        .comparison-cta {
+            text-align: center;
+        }
+
+        .comparison-cta h3 {
+            color: #C9A96E;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            padding: 2rem;
+            border-left: 4px solid #C9A96E;
+            border-radius: 2px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.15);
+        }
+
+        .why-card h4 {
+            color: #C9A96E;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .why-card p {
+            color: #B8B8B8;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
         /* Modal */
         .modal {
             display: none;
@@ -588,6 +694,119 @@
                 <div class="who-card">
                     <h3>Salon/Tat Artists</h3>
                     <p>Rent space, manage your own business. Keep what you earn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitor Comparison Section -->
+    <section class="competitor-comparison">
+        <div class="container">
+            <h2 class="section-title">How SuiteSeat Compares</h2>
+            <p style="text-align: center; color: #888; margin-bottom: 3rem; font-size: 1.1rem;">
+                We built SuiteSeat with suite owners in mind. Here's how we stack up.
+            </p>
+            <div class="competitor-table-wrapper">
+                <table class="competitor-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SuiteSeat<br><span style="font-size: 0.85rem;">Pro $29/mo</span></th>
+                            <th>Booksy<br><span style="font-size: 0.85rem;">$29.99/mo</span></th>
+                            <th>The Cut<br><span style="font-size: 0.85rem;">$25/mo</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Unlimited Services</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>SMS Reminders</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="x">Extra Cost</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>QR Code Check-In</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="x">✗</span></td>
+                            <td><span class="x">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>No-Show Fee Automation</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="x">Manual</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Payment Deposits</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Analytics & Reporting</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>First Month Free</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="x">✗</span></td>
+                            <td><span class="x">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Custom Branding (Pro)</td>
+                            <td><span class="x">Premium $79</span></td>
+                            <td><span class="x">Extra Cost</span></td>
+                            <td><span class="x">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Processing Fees</td>
+                            <td><span class="check">2.2%</span></td>
+                            <td><span class="check">2.49%</span></td>
+                            <td><span class="check">2.75%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Setup Fees</td>
+                            <td><span class="check">$0</span></td>
+                            <td><span class="check">$0</span></td>
+                            <td><span class="check">$0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Hidden Fees</td>
+                            <td><span class="check">None</span></td>
+                            <td><span class="x">SMS/Team Extra</span></td>
+                            <td><span class="check">None</span></td>
+                        </tr>
+                        <tr>
+                            <td>White-Label Option</td>
+                            <td><span class="check">Premium</span></td>
+                            <td><span class="x">✗</span></td>
+                            <td><span class="x">✗</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="comparison-cta">
+                <h3>Why Suite Owners Choose SuiteSeat</h3>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <h4>💰 No Hidden Costs</h4>
+                        <p>All features included. No extra charges for SMS, team members, or integrations.</p>
+                    </div>
+                    <div class="why-card">
+                        <h4>⚡ Built for Your Workflow</h4>
+                        <p>QR check-in alerts keep you in the loop. No guessing who showed up.</p>
+                    </div>
+                    <div class="why-card">
+                        <h4>🎁 First Month Free</h4>
+                        <p>Try it risk-free. No credit card required to test all features.</p>
+                    </div>
                 </div>
             </div>
         </div>
