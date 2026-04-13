@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuiteSeat Coming Soon Ad</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Instagram Feed Post (1080x1350) */
+        .coming-soon-feed {
+            width: 540px;
+            height: 675px;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .coming-soon-feed::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(201, 169, 110, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .coming-soon-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .coming-soon-content h2 {
+            font-size: 56px;
+            color: #C9A96E;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+        
+        .coming-soon-content .badge {
+            display: inline-block;
+            background: #C9A96E;
+            color: #0A0A0A;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .coming-soon-content p {
+            font-size: 20px;
+            color: #E8E8E8;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+        
+        .coming-soon-content .cta {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #C9A96E;
+            font-weight: bold;
+            padding: 15px;
+            border: 2px solid #C9A96E;
+            border-radius: 4px;
+        }
+        
+        /* Instagram Story (1080x1920) */
+        .coming-soon-story {
+            width: 540px;
+            height: 960px;
+            background: linear-gradient(135deg, #C9A96E 0%, #B8A360 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            color: #0A0A0A;
+            position: relative;
+        }
+        
+        .story-content {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .story-content h2 {
+            font-size: 60px;
+            color: #0A0A0A;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .story-content p {
+            font-size: 32px;
+            color: #0A0A0A;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .story-content .dm-cta {
+            font-size: 28px;
+            margin-top: 40px;
+            border: 3px solid #0A0A0A;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        
+        /* TikTok Square (1080x1080) */
+        .coming-soon-tiktok {
+            width: 540px;
+            height: 540px;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            position: relative;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        
+        .coming-soon-tiktok::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(201, 169, 110, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .tiktok-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .tiktok-content h2 {
+            font-size: 48px;
+            color: #C9A96E;
+            margin: 0 0 15px 0;
+            letter-spacing: 2px;
+        }
+        
+        .tiktok-content p {
+            font-size: 22px;
+            color: #E8E8E8;
+            margin: 10px 0;
+        }
+        
+        .tiktok-content .small {
+            font-size: 16px;
+            color: #B8B8B8;
+            margin-top: 15px;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid #C9A96E;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #0A0A0A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 SuiteSeat Coming Soon Ads</h1>
+        
+        <div class="info-box">
+            <h3>Strategy: Coming Soon + DM for Early Access</h3>
+            <p><strong>Why this works:</strong></p>
+            <ul>
+                <li>Build hype before launch</li>
+                <li>Create waitlist of early adopters</li>
+                <li>Get direct feedback from DMs</li>
+                <li>Launch with momentum (people already waiting)</li>
+                <li>Low pressure to be perfect day 1</li>
+            </ul>
+            <p><strong>Timeline:</strong> Run "Coming Soon" ads for 2-4 weeks, collect DMs, then launch with beta users.</p>
+        </div>
+        
+        <h2>Instagram Feed Post (1080x1350)</h2>
+        <div class="coming-soon-feed">
+            <div class="coming-soon-content">
+                <h2>SuiteSeat</h2>
+                <div class="badge">Coming Soon</div>
+                <p>Booking Software for Suite Owners</p>
+                <p style="font-size: 18px;">Stop managing bookings manually</p>
+                <p style="font-size: 18px;">SMS • Payments • Analytics</p>
+                <div class="cta">DM for Early Access</div>
+            </div>
+        </div>
+        
+        <h2>Instagram Story (1080x1920)</h2>
+        <div class="coming-soon-story">
+            <div class="story-content">
+                <h2>SuiteSeat</h2>
+                <p>Coming Soon</p>
+                <p style="font-size: 24px;">🔔</p>
+                <p style="font-size: 26px;">Get First Access</p>
+                <div class="dm-cta">📧 DM Us</div>
+            </div>
+        </div>
+        
+        <h2>TikTok / Reels (1080x1080)</h2>
+        <div class="coming-soon-tiktok">
+            <div class="tiktok-content">
+                <h2>SuiteSeat</h2>
+                <p>Coming Soon 🔔</p>
+                <p style="font-size: 18px;">Booking App For Suite Owners</p>
+                <p class="small">👇 DM for Early Access 👇</p>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📝 Caption Options</h3>
+            
+            <p><strong>Caption 1 (Build Hype):</strong></p>
+            <p>"Something big is coming. ⚡ We're building booking software built BY suite owners FOR suite owners. No more manual reminders. No more chasing payments. No more guessing who's arriving. SMS automations, QR check-in, built-in payments, and more. Want early access? Drop a DM. 🎯 #SuiteSeat #ComingSoon #SuiteOwner"</p>
+            
+            <p><strong>Caption 2 (Problem/Solution):</strong></p>
+            <p>"Tired of this? 😤 Texting reminders manually Chasing down payments Managing no-shows Spending hours organizing We heard you. That's why we're building SuiteSeat — the booking app suite owners actually want. First month is FREE. Want in? DM us. #BarberLife #SalonOwner #Automation #SuiteSeat"</p>
+            
+            <p><strong>Caption 3 (Direct CTA):</strong></p>
+            <p>"🚨 Early Access Alert 🚨 SuiteSeat is launching soon and we're offering first month FREE to early adopters. If you own a suite and want to automate your booking chaos, DM us to get on the waitlist. Limited spots available. #SuiteSeat #EarlyAccess #BookingSoftware"</p>
+            
+            <p><strong>Caption 4 (Feature Tease):</strong></p>
+            <p>"What's coming: ✅ Clients text to check in ✅ Automatic SMS reminders ✅ One-click payments ✅ Real-time analytics ✅ No hidden fees One booking app. Everything you need. Nothing you don't. Coming soon. DM for early access. #SuiteSeat #SmartBooking"</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>🎯 Hashtags</h3>
+            <p>#SuiteSeat #ComingSoon #SuiteOwner #Barber #Salon #TatArtist #BookingApp #EarlyAccess #SuiteOwnerLife #BarberShop #SalonOwner #BusinessAutomation #Entrepreneur #IndependentBusiness</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>💬 DM Response Template</h3>
+            <p><strong>When someone DMs "early access":</strong></p>
+            <blockquote style="background: #f5f5f5; padding: 15px; border-radius: 4px; font-style: italic;">
+                "Thanks for the interest! 🎯 SuiteSeat launches in [2-4 weeks]. You'll get: First month FREE ✅ Direct access to our team ✅ Ability to shape the product based on your feedback ✅ Priority support ✅ What's your biggest booking pain point right now?"
+            </blockquote>
+            <p><strong>This does 3 things:</strong> Sets expectations, builds relationship, gathers feedback for product development</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>📅 Coming Soon Campaign Schedule</h3>
+            <ul>
+                <li><strong>Week 1:</strong> Post coming soon ads. Run Stories. Get DMs rolling.</li>
+                <li><strong>Week 2-3:</strong> Post feature teasers (SMS, payments, analytics). Share DM feedback snippets.</li>
+                <li><strong>Week 4:</strong> "Launch in [X days]" countdown. Final hype push.</li>
+                <li><strong>Launch Day:</strong> Post announcement. DM all waitlist people. Start onboarding beta users.</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>✅ Setup Checklist</h3>
+            <ul>
+                <li>✅ Create Instagram account: @suiteseat</li>
+                <li>✅ Create TikTok account: @suiteseat</li>
+                <li>✅ Create Facebook page: SuiteSeat</li>
+                <li>✅ Use profile pictures from profile-pic.html</li>
+                <li>✅ Use bio: "Coming soon. DM for early access. suiteseat.com"</li>
+                <li>✅ Post coming soon graphics</li>
+                <li>✅ Turn on DM notifications</li>
+                <li>✅ Respond to all DMs within 2 hours</li>
+                <li>✅ Keep a spreadsheet of DMs for waitlist</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
