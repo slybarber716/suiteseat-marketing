@@ -386,6 +386,54 @@
             color: #888;
         }
 
+        /* SMS Chatbot Section */
+        .chatbot-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0A0A0A 100%);
+            border-bottom: 2px solid #C9A96E;
+        }
+
+        .chatbot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .chatbot-feature {
+            background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+            padding: 2.5rem;
+            border-radius: 2px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+        }
+
+        .chatbot-feature:hover {
+            border: 1px solid #C9A96E;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.2);
+        }
+
+        .chatbot-feature .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .chatbot-feature h3 {
+            color: #C9A96E;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .chatbot-feature p {
+            color: #B8B8B8;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
         /* Competitor Comparison */
         .competitor-comparison {
             padding: 5rem 2rem;
@@ -655,8 +703,8 @@
                     <p>Clients book online 24/7. No back-and-forth texts or calls. Simple, beautiful booking page.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📲 SMS Automations</h3>
-                    <p>Automatic reminders, check-in alerts, and confirmations. Keep clients informed without the work.</p>
+                    <h3>💬 SMS Chatbot</h3>
+                    <p>Clients text to check in. Automatic reminders and confirmations. Two-way messaging that saves you time.</p>
                 </div>
                 <div class="feature-card">
                     <h3>💳 Smart Payments</h3>
@@ -694,6 +742,37 @@
                 <div class="who-card">
                     <h3>Salon/Tat Artists</h3>
                     <p>Rent space, manage your own business. Keep what you earn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMS Chatbot Section -->
+    <section class="chatbot-section">
+        <div class="container">
+            <div class="chatbot-content">
+                <h2 class="section-title">SMS Chatbot (Unique to SuiteSeat)</h2>
+                <div class="chatbot-grid">
+                    <div class="chatbot-feature">
+                        <div class="icon">📱</div>
+                        <h3>Clients Text to Check In</h3>
+                        <p>No need to ask. Your clients text their name and you get an instant alert. Know exactly who's arriving.</p>
+                    </div>
+                    <div class="chatbot-feature">
+                        <div class="icon">⏰</div>
+                        <h3>Automatic Reminders</h3>
+                        <p>24-hour and 1-hour reminders sent automatically. Less no-shows, more bookings.</p>
+                    </div>
+                    <div class="chatbot-feature">
+                        <div class="icon">✅</div>
+                        <h3>Booking Confirmations</h3>
+                        <p>Clients get instant SMS confirmation. Reduces confusion and improves client experience.</p>
+                    </div>
+                    <div class="chatbot-feature">
+                        <div class="icon">🚫</div>
+                        <h3>Cancelation & Rescheduling</h3>
+                        <p>Clients can text to cancel or reschedule. You control the workflow from one app.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -786,6 +865,12 @@
                         <tr>
                             <td>White-Label Option</td>
                             <td><span class="check">Premium</span></td>
+                            <td><span class="x">✗</span></td>
+                            <td><span class="x">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>SMS Chatbot (Check-In)</td>
+                            <td><span class="check">✓</span></td>
                             <td><span class="x">✗</span></td>
                             <td><span class="x">✗</span></td>
                         </tr>
