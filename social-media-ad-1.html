@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuiteSeat Social Media Ad - Instagram/Facebook</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Instagram Feed Post (1080x1350) */
+        .instagram-feed {
+            width: 540px;
+            height: 675px;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .instagram-feed::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(201, 169, 110, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .instagram-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .instagram-content h2 {
+            font-size: 48px;
+            color: #C9A96E;
+            margin: 0 0 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        .instagram-content p {
+            font-size: 24px;
+            color: #E8E8E8;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+        
+        .instagram-content .tagline {
+            color: #B8B8B8;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        
+        .instagram-content .cta {
+            margin-top: 40px;
+            font-size: 20px;
+            color: #C9A96E;
+            font-weight: bold;
+        }
+        
+        /* Instagram Story (1080x1920) */
+        .instagram-story {
+            width: 540px;
+            height: 960px;
+            background: linear-gradient(135deg, #C9A96E 0%, #B8A360 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            color: #0A0A0A;
+            position: relative;
+        }
+        
+        .story-content {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .story-content h2 {
+            font-size: 56px;
+            color: #0A0A0A;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .story-content p {
+            font-size: 28px;
+            color: #0A0A0A;
+            margin: 20px 0 0 0;
+            font-weight: bold;
+        }
+        
+        /* TikTok Square (1080x1080) */
+        .tiktok-square {
+            width: 540px;
+            height: 540px;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            position: relative;
+        }
+        
+        .tiktok-square::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(201, 169, 110, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .tiktok-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .tiktok-content h2 {
+            font-size: 44px;
+            color: #C9A96E;
+            margin: 0 0 15px 0;
+            letter-spacing: 2px;
+        }
+        
+        .tiktok-content p {
+            font-size: 20px;
+            color: #E8E8E8;
+            margin: 15px 0;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid #C9A96E;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #0A0A0A;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #C9A96E;
+            color: #0A0A0A;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        
+        .download-btn:hover {
+            background: #E8D4B8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 SuiteSeat Social Media Assets</h1>
+        
+        <div class="info-box">
+            <h3>📱 How to Use These Assets</h3>
+            <p><strong>Instagram Feed Post:</strong> Use as carousel or single post (1080x1350)</p>
+            <p><strong>Instagram Story:</strong> Post as Story (1080x1920)</p>
+            <p><strong>TikTok/Reels:</strong> Use for short video thumbnails (1080x1080)</p>
+            <p><strong>Facebook:</strong> Use Instagram Feed size, crops work for all platforms</p>
+            <button class="download-btn" onclick="downloadImage('instagram-feed')">📥 Download as Image</button>
+        </div>
+        
+        <h2>Instagram Feed Post (1080x1350)</h2>
+        <div class="instagram-feed" id="instagram-feed">
+            <div class="instagram-content">
+                <h2>SuiteSeat</h2>
+                <p>Booking Software Built for Suite Owners</p>
+                <p style="font-size: 20px;">SMS Reminders • QR Check-In • No-Show Protection</p>
+                <div class="tagline">First Month FREE</div>
+                <div class="cta">Link in bio →</div>
+            </div>
+        </div>
+        
+        <h2>Instagram Story (1080x1920)</h2>
+        <div class="instagram-story">
+            <div class="story-content">
+                <h2>Own Your Suite</h2>
+                <p>Manage Bookings</p>
+                <p>Get Paid</p>
+                <p style="margin-top: 40px; font-size: 24px; color: #0A0A0A;">Try Free →</p>
+            </div>
+        </div>
+        
+        <h2>TikTok / Reels Square (1080x1080)</h2>
+        <div class="tiktok-square">
+            <div class="tiktok-content">
+                <h2>SuiteSeat</h2>
+                <p>Stop Managing Bookings</p>
+                <p style="font-size: 18px; color: #C9A96E;">SMS • Payments • Analytics</p>
+                <p style="margin-top: 30px; font-size: 16px;">First Month FREE</p>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📝 Suggested Captions</h3>
+            
+            <p><strong>Caption 1 (Educational):</strong></p>
+            <p>"Stop wasting time on booking management. SuiteSeat handles reminders, payments, and check-ins automatically. Built by suite owners, for suite owners. 🔑 First month FREE 🔑 #SuiteSeat #SuiteOwner #Barber #Salon #TatArtist #BookingSoftware"</p>
+            
+            <p><strong>Caption 2 (Pain Point):</strong></p>
+            <p>"Tired of texting reminders? Chasing down payments? Managing no-shows? We built SuiteSeat to do the heavy lifting so you can focus on what you do best — your craft. SMS chatbot, automatic payments, QR check-in. Try it free for a month. #BarberLife #SalonOwner #BookingApp"</p>
+            
+            <p><strong>Caption 3 (FOMO):</strong></p>
+            <p>"Your competitors are already using booking software. Don't get left behind. SuiteSeat keeps you organized, clients happy, and revenue protected. First month on us. #SuiteSeats #SuiteOwnerLife #Automation #BusinessGrowth"</p>
+            
+            <p><strong>Caption 4 (Benefit-Driven):</strong></p>
+            <p>"Imagine: Clients text to check in ✅ Automatic reminders ✅ No-shows protected ✅ Analytics that show what's working ✅ SuiteSeat makes it possible. Try free today. #SmartBooking #SuiteOwner #BarberShop #SalonLife"</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>🎯 Hashtag Strategy</h3>
+            <p>#SuiteSeat #SuiteOwner #Barber #BarberShop #Salon #SalonOwner #TatArtist #BookingSoftware #BusinessAutomation #IndependentBusiness #BarberLife #SalonLife #SmartScheduling #NoShowProtection</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>📅 Social Media Strategy</h3>
+            <p><strong>Post Schedule (Free Tier):</strong></p>
+            <ul>
+                <li><strong>Monday:</strong> Educational post (how SuiteSeat saves time)</li>
+                <li><strong>Wednesday:</strong> Pain point post (problem/solution)</li>
+                <li><strong>Friday:</strong> Social proof or feature highlight</li>
+                <li><strong>Weekend:</strong> Stories (behind the scenes, tips for suite owners)</li>
+            </ul>
+            <p><strong>Engagement Strategy:</strong> Reply to all comments within first hour. Follow suite owners & barbers. Use Stories for polls/questions. Go live 2x/week answering booking questions.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuiteSeat Profile Picture</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Profile Picture Styles */
+        .profile-pic-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        /* Square Profile Pic (for all platforms) */
+        .profile-pic {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-pic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(201, 169, 110, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .profile-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .profile-content .logo {
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+        
+        .profile-content h2 {
+            font-size: 48px;
+            color: #C9A96E;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+        
+        .profile-content p {
+            font-size: 14px;
+            color: #B8B8B8;
+            margin: 0;
+        }
+        
+        /* Square Version (Instagram) */
+        .profile-pic-square {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-pic-square::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(201, 169, 110, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .profile-square-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .profile-square-content .icon {
+            font-size: 100px;
+            margin-bottom: 15px;
+        }
+        
+        .profile-square-content h2 {
+            font-size: 56px;
+            color: #C9A96E;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .profile-square-content p {
+            font-size: 16px;
+            color: #B8B8B8;
+            margin: 15px 0 0 0;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid #C9A96E;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #0A0A0A;
+        }
+        
+        .info-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .info-box li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 SuiteSeat Profile Pictures</h1>
+        
+        <div class="info-box">
+            <h3>How to Use</h3>
+            <p><strong>All Platforms:</strong> Use the circular profile pic for Instagram, TikTok, Facebook, and Twitter.</p>
+            <p><strong>Square Option:</strong> Use the square version if circular doesn't display properly on any platform.</p>
+            <p>Right-click → Save Image As to download</p>
+        </div>
+        
+        <h2>Circular Profile Picture (All Platforms)</h2>
+        <div style="display: flex; justify-content: center;">
+            <div class="profile-pic">
+                <div class="profile-content">
+                    <div style="font-size: 60px; margin-bottom: 5px;">💺</div>
+                    <h2>SS</h2>
+                    <p>SuiteSeat</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Square Profile Picture (Instagram/Facebook)</h2>
+        <div style="display: flex; justify-content: center;">
+            <div class="profile-pic-square">
+                <div class="profile-square-content">
+                    <div class="icon">💺</div>
+                    <h2>SS</h2>
+                    <p>SuiteSeat</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📝 Bio Templates</h3>
+            
+            <p><strong>Option 1 (Simple):</strong></p>
+            <p>💺 Suite Booking Software<br>Built by suite owners, for suite owners<br>🔗 suiteseat.com</p>
+            
+            <p><strong>Option 2 (With CTA):</strong></p>
+            <p>Booking software for barbers, stylists & tat artists 💇‍♂️✂️<br>SMS reminders • QR check-in • Payments<br>Try free 👉 suiteseat.com</p>
+            
+            <p><strong>Option 3 (Benefit-Focused):</strong></p>
+            <p>Stop managing bookings manually<br>Automate reminders, payments & no-shows<br>First month free → suiteseat.com</p>
+            
+            <p><strong>Option 4 (Casual/Engaging):</strong></p>
+            <p>Making suite ownership easier ☑️<br>Smart booking. Real results.<br>Join 1000s of suite owners 🚀</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>🎨 Social Media Setup Checklist</h3>
+            <ul>
+                <li>✅ Profile picture: Use circular SS logo above</li>
+                <li>✅ Bio: Pick one from above + add website link</li>
+                <li>✅ Username: @suiteseat (all platforms)</li>
+                <li>✅ Link in bio: suiteseat.com (when live)</li>
+                <li>✅ First post: Welcome post + 1 feature post</li>
+                <li>✅ Highlight covers: Create Reels/Stories covers with brand colors</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>📱 Platform-Specific Setup</h3>
+            
+            <p><strong>Instagram:</strong></p>
+            <ul>
+                <li>Profile pic: Circular</li>
+                <li>Cover photo: Use competitor comparison or feature graphic</li>
+                <li>Highlights: "Features," "Pricing," "Testimonials" (when you get them)</li>
+                <li>Post 3x week minimum</li>
+            </ul>
+            
+            <p><strong>TikTok:</strong></p>
+            <ul>
+                <li>Profile pic: Circular</li>
+                <li>Bio: Same as Instagram</li>
+                <li>Content: Short videos (15-60 sec) about booking problems & solutions</li>
+                <li>Post 3-5x week for algorithm boost</li>
+            </ul>
+            
+            <p><strong>Facebook:</strong></p>
+            <ul>
+                <li>Profile pic: Circular or square</li>
+                <li>Cover photo: Large hero image or feature showcase</li>
+                <li>Create a business page (not personal)</li>
+                <li>Post 3-4x week</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>💡 Content Ideas for First 30 Days</h3>
+            <ul>
+                <li><strong>Welcome Video:</strong> "Welcome to SuiteSeat" 30-sec intro</li>
+                <li><strong>Problem Posts:</strong> "Do you text reminders manually?" Yes/No poll</li>
+                <li><strong>Feature Showcases:</strong> SMS chatbot, QR check-in, payments</li>
+                <li><strong>Comparison:</strong> "Why suite owners choose SuiteSeat"</li>
+                <li><strong>Social Proof:</strong> (once you have early users) Customer testimonials</li>
+                <li><strong>Behind the Scenes:</strong> Building process, team updates</li>
+                <li><strong>Educational:</strong> "5 reasons no-shows hurt your business"</li>
+                <li><strong>CTAs:</strong> "Try free for 1 month — link in bio"</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
